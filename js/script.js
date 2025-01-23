@@ -50,7 +50,7 @@ function uploadCard() {
      `
     <div class="card d-flex flex-row  bg-dark  text-light p-2 px-3 my-3">
 
-      <img src='${element.img}' class="p-2 rounded" alt="imgProfilo">
+      <img  style="max-width: 216px; max-height: 216px; object-fit: cover; min-height: 216px;" src='${element.img}' class="p-2 rounded" alt="imgProfilo">
 
       <div class="card-body d-flex flex-column lh-lg align-items-center">
 
@@ -86,19 +86,8 @@ btn.addEventListener('click', function(event) {
     img
   });
 
-  console.log(teamMembers); 
+console.log(teamMembers); 
  teamContainer.innerHTML = ''
-  
-  // teamContainer.innerHTML += `
-  //   <div class="card d-flex flex-row bg-dark text-light p-2 px-3 my-3">
-  //     <img src='${img}' class="p-2 rounded" alt="imgProfilo">
-  //     <div class="card-body d-flex flex-column lh-lg align-items-center">
-  //       <h5 class="card-title my-2">${name}</h5>
-  //       <span class="card-text my-2">${role}</span>
-  //       <span class="card-text my-2">${email}</span>
-  //     </div>
-  //   </div>
-  // `
-  uploadCard() 
+ uploadCard() 
 });
 
