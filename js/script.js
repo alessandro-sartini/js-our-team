@@ -86,8 +86,9 @@ btn.addEventListener('click', function(event) {
     img
   });
 
-console.log(teamMembers); 
- teamContainer.innerHTML = ''
- uploadCard() 
+  console.log(teamMembers); 
+  teamContainer.innerHTML = ''
+  uploadCard() 
+  
 });
 
