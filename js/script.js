@@ -69,49 +69,36 @@ function uploadCard() {
 }
 uploadCard()
 
-const btn = document.getElementsByClassName(".btn")
+const btn = document.getElementById("btn")
 
-btn.addEventListener('clock', function (event) {
+btn.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const role = document.getElementById('role').value;
+  const email = document.getElementById('email').value;
+  const img = document.getElementById('img').value;
+
+  teamMembers.push({
+    name,
+    role,
+    email,
+    img
+  });
+
+  console.log(teamMembers); 
+ teamContainer.innerHTML = ''
   
-  event.preventDefault()
-  const name= document.getElementById('name')
-  const role= document.getElementById('role')
-  const email= document.getElementById('email')
-  const img= document.getElementById('img')
-
-  teamMembers.push(
-    {
-      name,
-      role,
-      email,
-      img
-
-    }
-
-  )
-
-  teamContainer.innerHTML +=
-    
-  `
-  <div class="card d-flex flex-row  bg-dark  text-light p-2 px-3 my-3">
-
-    <img src='${img}' class="p-2 rounded" alt="imgProfilo">
-
-    <div class="card-body d-flex flex-column lh-lg align-items-center">
-
-     <h5 class="card-title my-2">${name}</h5>
-     <span class="card-text my-2">${role}</span>
-     <span class="card-text my-2">${email}</span>
-
-    </div>
-
-   </div>
- 
- `
-
-
-
-
-})
-
+  // teamContainer.innerHTML += `
+  //   <div class="card d-flex flex-row bg-dark text-light p-2 px-3 my-3">
+  //     <img src='${img}' class="p-2 rounded" alt="imgProfilo">
+  //     <div class="card-body d-flex flex-column lh-lg align-items-center">
+  //       <h5 class="card-title my-2">${name}</h5>
+  //       <span class="card-text my-2">${role}</span>
+  //       <span class="card-text my-2">${email}</span>
+  //     </div>
+  //   </div>
+  // `
+  uploadCard() 
+});
 
